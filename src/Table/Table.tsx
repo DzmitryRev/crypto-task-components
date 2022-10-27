@@ -1,5 +1,5 @@
-import { PropsWithChildren, ReactNode } from 'react';
-import { StyledTable } from './StyledTable';
+import React, { PropsWithChildren, ReactNode } from "react";
+import { StyledTable } from "./StyledTable";
 
 type TablePropsType = {
   head: ReactNode;

@@ -1,5 +1,9 @@
-import { PropsWithChildren } from 'react';
+import React, { ReactNode } from "react";
 
-export default function TableRow({ children }: PropsWithChildren) {
+type TableRowProps = {
+  children?: ReactNode | undefined;
+};
+
+export default function TableRow({ children }: TableRowProps) {
   return <tr data-testid="table-row">{children}</tr>;
 }

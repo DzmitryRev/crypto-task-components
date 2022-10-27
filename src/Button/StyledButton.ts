@@ -1,13 +1,13 @@
-import Variables from '../styles/variables';
-import styled from 'styled-components';
-
+import Variables from "../styles/variables";
+import styled from "styled-components";
 
 const StyledButton = styled.button`
-  background-color: ${(props) => (props.color === 'blue'
-    ? Variables.colors.blue
-    : props.color === 'red'
+  background-color: ${(props) =>
+    props.color === "blue"
+      ? Variables.colors.blue
+      : props.color === "red"
       ? Variables.colors.red
-      : Variables.colors.green)};
+      : Variables.colors.green};
   color: #fff;
   padding: 10px 10px;
   font-size: 14px;

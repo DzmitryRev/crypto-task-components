@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import Variables from '../styles/variables';
+import styled from "styled-components";
+import Variables from "../styles/variables";
 
 export const StyledModalShadow = styled.div`
   position: fixed;
@@ -13,7 +13,7 @@ export const StyledModalShadow = styled.div`
 `;
 
 type StyledModalProps = {
-  type: 'default' | 'minify';
+  type: "default" | "minify";
 };
 
 export const StyledModal = styled.div<StyledModalProps>`
@@ -21,7 +21,7 @@ export const StyledModal = styled.div<StyledModalProps>`
   display: block;
   min-height: 224px;
   min-width: 320px;
-  width: ${(props) => (props.type === 'default' ? 560 : 320)}px;
+  width: ${(props) => (props.type === "default" ? 560 : 320)}px;
   max-height: 90vh;
   overflow-y: scroll;
   border-radius: 10px;
@@ -40,8 +40,9 @@ export const StyledModal = styled.div<StyledModalProps>`
   ::-webkit-scrollbar {
     width: 0;
   }
-  ${(props) => props.type === 'default'
-    && `
+  ${(props) =>
+    props.type === "default" &&
+    `
   @media screen and (max-width: ${Variables.bp.l}px) {
     width: 460px;
   }

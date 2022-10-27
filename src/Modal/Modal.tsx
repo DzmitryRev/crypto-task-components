@@ -1,10 +1,10 @@
-import React, { PropsWithChildren } from 'react';
-import ClearIcon from '@mui/icons-material/Clear';
-import { StyledModal, StyledModalShadow } from './StyledModal';
-import useModal from '../hooks/useModal';
+import React, { PropsWithChildren } from "react";
+import ClearIcon from "@mui/icons-material/Clear";
+import { StyledModal, StyledModalShadow } from "./StyledModal";
+import useModal from "../hooks/useModal";
 
 type ModalProps = {
-  type: 'default' | 'minify';
+  type: "default" | "minify";
 };
 
 function Modal({ type, children }: PropsWithChildren<ModalProps>) {
