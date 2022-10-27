@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { StyledModal, StyledModalShadow } from "./StyledModal";
 import useModal from "../hooks/useModal";
-// import {C} from "@mui/material"
+import { Icon } from "semantic-ui-react";
 
 type ModalProps = {
   type: "default" | "minify";
@@ -22,13 +22,7 @@ function Modal({ type, children }: PropsWithChildren<ModalProps>) {
       >
         {children}
         <div className="close-button">
-          {/* <ClearIcon
-            data-testid="modal-close-btn"
-            fontSize="large"
-            color="inherit"
-            onClick={closeModal}
-          /> */}
-          <div onClick={closeModal}>Close</div>
+          <Icon name="close" size="small" onClick={closeModal} />
         </div>
       </StyledModal>
     </>

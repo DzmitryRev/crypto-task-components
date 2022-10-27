@@ -1,4 +1,4 @@
-import { CircularProgress } from "@mui/material";
+// import { CircularProgress } from "@mui/material";
 import styled from "styled-components";
 
 export const StyledLoadingContainer = styled.div`
@@ -9,8 +9,8 @@ export const StyledLoadingContainer = styled.div`
   right: 0;
 `;
 
-export const StyledLoading = styled(CircularProgress)`
-  position: absolute;
-  top: calc(50% - 15px);
-  left: calc(50% - 15px);
-`;
+// export const StyledLoading = styled(CircularProgress)`
+//   position: absolute;
+//   top: calc(50% - 15px);
+//   left: calc(50% - 15px);
+// `;
