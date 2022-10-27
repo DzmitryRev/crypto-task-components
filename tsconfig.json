@@ -2,13 +2,13 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "strict": true,
     "esModuleInterop": true,
     "lib": ["es2015", "dom"],
     "outDir": "./dist/",
     "sourceMap": true,
-    "declaration": true
+    "declaration": true,
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "./src/stories"]
