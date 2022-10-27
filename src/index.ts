@@ -5,6 +5,5 @@ import Modal from "./Modal/Modal";
 import Pagination from "./Pagination/Pagination";
 import Table from "./Table/Table";
 import TableRow from "./TableRow/TableRow";
-import "@mui/icons-material/Clear";
 
 export { Button, ButtonLink, Loading, Modal, Pagination, Table, TableRow };
