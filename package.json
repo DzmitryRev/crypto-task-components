@@ -37,7 +37,8 @@
     },
     "peerDependencies": {
         "react": "*",
-        "react-dom": "*"
+        "react-dom": "*",
+        "react-router-dom": "*"
     },
     "files": [
         "dist"
