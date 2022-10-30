@@ -8,7 +8,7 @@ import ButtonLink from "../Link";
 test('Should render ButtonLink component with "Hello" children', () => {
   render(
     <BrowserRouter>
-      <ButtonLink color="red" path="/">
+      <ButtonLink color="red" to="/">
         Hello
       </ButtonLink>
     </BrowserRouter>
@@ -22,7 +22,7 @@ test('Should render ButtonLink component with "Hello" children', () => {
 test("Should render green ButtonLink component", () => {
   render(
     <BrowserRouter>
-      <ButtonLink color="green" path="/">
+      <ButtonLink color="green" to="/">
         Hello
       </ButtonLink>
     </BrowserRouter>
@@ -36,7 +36,7 @@ test("Should render green ButtonLink component", () => {
 test("Should render red ButtonLink component", () => {
   render(
     <BrowserRouter>
-      <ButtonLink color="red" path="/">
+      <ButtonLink color="red" to="/">
         Hello
       </ButtonLink>
     </BrowserRouter>
@@ -50,7 +50,7 @@ test("Should render red ButtonLink component", () => {
 test("Should render blue ButtonLink component", () => {
   render(
     <BrowserRouter>
-      <ButtonLink color="blue" path="/">
+      <ButtonLink color="blue" to="/">
         Hello
       </ButtonLink>
     </BrowserRouter>
@@ -61,10 +61,10 @@ test("Should render blue ButtonLink component", () => {
   expect(greenLinkButton).not.toHaveStyleRule("background-color", Variables.colors.green);
 });
 
-test("Should render ButtonLink component with hfref attribute", async () => {
+test("Should render ButtonLink component with href attribute", async () => {
   render(
     <MemoryRouter>
-      <ButtonLink color="red" path="/testpath">
+      <ButtonLink color="red" to="/testpath">
         Hello
       </ButtonLink>
     </MemoryRouter>
