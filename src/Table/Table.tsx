@@ -7,7 +7,7 @@ interface TablePropsType extends React.ComponentProps<"table"> {
   body: ReactNode;
 }
 
-function Table({ body }: PropsWithChildren<TablePropsType>) {
+function Table({ body }: TablePropsType) {
   return (
     <StyledTable data-testid="table">
       <thead>
