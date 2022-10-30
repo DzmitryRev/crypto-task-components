@@ -3,9 +3,9 @@ import { StyledModal, StyledModalShadow } from "./StyledModal";
 import useModal from "../hooks/useModal";
 import closeIcon from "../assets/close.svg";
 
-type ModalProps = {
+interface ModalProps extends React.ComponentProps<"div"> {
   type: "default" | "minify";
-};
+}
 
 function Modal({ type, children }: PropsWithChildren<ModalProps>) {
   const { closeModal } = useModal();

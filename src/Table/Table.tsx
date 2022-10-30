@@ -1,15 +1,27 @@
 import React, { PropsWithChildren, ReactNode } from "react";
-import { StyledTable } from "./StyledTable";
+import Variables from "../styles/variables";
+import TableRow from "../TableRow/TableRow";
+import { StyledTable, StyledTableCell } from "./StyledTable";
 
-type TablePropsType = {
-  head: ReactNode;
+interface TablePropsType extends React.ComponentProps<"table"> {
   body: ReactNode;
-};
+}
 
-function Table({ head, body }: PropsWithChildren<TablePropsType>) {
+function Table({ body }: PropsWithChildren<TablePropsType>) {
   return (
     <StyledTable data-testid="table">
-      <thead>{head}</thead>
+      <thead>
+        <TableRow>
+          <StyledTableCell as="th">Name</StyledTableCell>
+          <StyledTableCell as="th" breakpoint={Variables.bp.l}>
+            Symbol
+          </StyledTableCell>
+          <StyledTableCell as="th" breakpoint={Variables.bp.m}>
+            $
+          </StyledTableCell>
+          <StyledTableCell as="th">%</StyledTableCell>
+        </TableRow>
+      </thead>
       <tbody>{body}</tbody>
     </StyledTable>
   );

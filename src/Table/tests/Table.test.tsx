@@ -4,34 +4,24 @@ import Table from "../Table";
 import React from "react";
 
 test("Should render Table component with head row", () => {
-  render(
-    <Table
-      head={
-        <tr>
-          <td>head 1</td>
-          <td>head 2</td>
-          <td>head 3</td>
-        </tr>
-      }
-      body={<tr />}
-    />
-  );
+  render(<Table body={<tr></tr>} />);
   const table = screen.getByTestId("table");
   expect(table).toBeInTheDocument();
-  expect(table).toHaveTextContent("head 1");
-  expect(table).toHaveTextContent("head 1");
-  expect(table).toHaveTextContent("head 1");
+  expect(table).toHaveTextContent("Name");
+  expect(table).toHaveTextContent("Symbol");
+  expect(table).toHaveTextContent("$");
+  expect(table).toHaveTextContent("%");
 });
 
 test("Should render Table component with children", () => {
   render(
     <Table
-      head={<tr />}
       body={
         <tr>
           <td>body 1</td>
           <td>body 2</td>
           <td>body 3</td>
+          <td>body 4</td>
         </tr>
       }
     />
