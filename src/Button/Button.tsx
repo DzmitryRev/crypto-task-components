@@ -1,11 +1,11 @@
 import React, { PropsWithChildren } from "react";
 import StyledButton from "./StyledButton";
 
-type ButtonPropsType = {
+interface ButtonPropsType extends React.ComponentProps<"button"> {
   color: "blue" | "green" | "red";
   action?: () => void;
   disabled?: boolean;
-};
+}
 
 function Button({
   color,
