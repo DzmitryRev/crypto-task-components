@@ -8,6 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     libraryTarget: "umd",
     clean: true,
+    publicPath: "",
   },
   resolve: {
     extensions: [".ts", ".tsx"],
