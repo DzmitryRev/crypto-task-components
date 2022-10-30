@@ -46,12 +46,12 @@ test("Should render disbled Button component", () => {
   expect(greenButton).toHaveAttribute("disabled");
 });
 
-test("Should render Button with callback component", () => {
+test("Should render Button with action", () => {
   const handleClick = jest.fn();
   render(
     <Button
       color="red"
-      action={() => {
+      onClick={() => {
         handleClick();
       }}
     >
