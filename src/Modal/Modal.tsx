@@ -1,17 +1,36 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useEffect } from "react";
 import { StyledModal, StyledModalShadow } from "./StyledModal";
-import useModal from "../hooks/useModal";
 import closeIcon from "../assets/close.svg";
 
 interface ModalProps extends React.ComponentProps<"div"> {
   type: "default" | "minify";
+  closeModalExtraCallback?: () => {};
 }
 
-function Modal({ type, children }: PropsWithChildren<ModalProps>) {
-  const { closeModal } = useModal();
+function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<ModalProps>) {
+  const closeModal = () => {
+    document.body.style.overflow = "auto";
+  };
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
     <>
-      <StyledModalShadow data-testid="modal-shadow" aria-hidden="true" onClick={closeModal} />
+      <StyledModalShadow
+        data-testid="modal-shadow"
+        aria-hidden="true"
+        onClick={() => {
+          if (closeModalExtraCallback) {
+            closeModalExtraCallback();
+          }
+          closeModal();
+        }}
+      />
       <StyledModal
         data-testid="modal"
         aria-hidden="true"
