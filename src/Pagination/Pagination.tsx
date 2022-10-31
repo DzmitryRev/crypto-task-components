@@ -11,6 +11,7 @@ function Pagination({ currentOffset, setPage }: PaginationPropsType) {
   return (
     <StyledPagination data-testid="pagination">
       <Button
+        as="button"
         color="blue"
         onClick={() => {
           setPage(currentOffset - 50);
@@ -20,6 +21,7 @@ function Pagination({ currentOffset, setPage }: PaginationPropsType) {
         {"<"}
       </Button>
       <Button
+        as="button"
         color="blue"
         onClick={() => {
           setPage(currentOffset + 50);
