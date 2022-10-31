@@ -1,11 +1,18 @@
-import React, { PropsWithChildren } from "react";
+import React, { JSXElementConstructor, PropsWithChildren } from "react";
+import { Link } from "react-router-dom";
+import { IntrinsicElementsKeys } from "styled-components";
 import StyledButton from "./StyledButton";
 
-interface ButtonPropsType extends React.ComponentProps<typeof StyledButton> {
+export interface ButtonPropsType<T> {
   color: "blue" | "green" | "red";
+  as: T;
 }
 
-function Button({ color, children, as }: PropsWithChildren<ButtonPropsType>) {
+function Button<T extends IntrinsicElementsKeys | JSXElementConstructor<any>>({
+  color,
+  children,
+  as,
+}: PropsWithChildren<ButtonPropsType<T> & React.ComponentProps<T>>) {
   return (
     <StyledButton as={as} data-testid="button" color={color}>
       {children}

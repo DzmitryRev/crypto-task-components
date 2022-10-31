@@ -3,9 +3,14 @@ import React from "react";
 import Button from "../Button";
 import "jest-styled-components";
 import Variables from "../../styles/variables";
+import { Link } from "react-router-dom";
 
 test('Should render Button with "Hello" children', () => {
-  render(<Button color="red">Hello</Button>);
+  render(
+    <Button<typeof Link> as={Link} to="as" color="red">
+      Hello
+    </Button>
+  );
   const helloButton = screen.getByTestId("button");
   expect(helloButton).toBeInTheDocument();
   expect(helloButton).toHaveTextContent("Hello");
