@@ -8,9 +8,9 @@ export interface ButtonPropsType
   color: "blue" | "green" | "red";
 }
 
-function Button({ children, color }: PropsWithChildren<ButtonPropsType>) {
+function Button({ as, children, color }: PropsWithChildren<ButtonPropsType>) {
   return (
-    <StyledButton color={color} data-testid="button">
+    <StyledButton as={as} color={color} data-testid="button">
       {children}
     </StyledButton>
   );
