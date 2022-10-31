@@ -4,7 +4,7 @@ import closeIcon from "../assets/close.svg";
 
 interface ModalProps extends React.ComponentProps<"div"> {
   type: "default" | "minify";
-  closeModalExtraCallback?: () => {};
+  closeModalExtraCallback?: () => void;
 }
 
 function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<ModalProps>) {
