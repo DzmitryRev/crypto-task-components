@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 test('Should render Button with "Hello" children', () => {
   render(
     <>
-      <Button color="red">Hello</Button>
+      <Button color="blue">Hello</Button>
     </>
   );
   const helloButton = screen.getByTestId("button");
