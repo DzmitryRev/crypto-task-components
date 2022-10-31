@@ -8,9 +8,10 @@ interface ButtonLinkPropsType extends React.ComponentProps<typeof Link> {
 
 function ButtonLink({ color, to, children }: PropsWithChildren<ButtonLinkPropsType>) {
   return (
-    <StyledButton as={Link} data-testid="link" to={to} color={color}>
-      {children}
-    </StyledButton>
+    // <StyledButton as={Link} data-testid="link" to={to} color={color}>
+    //   {children}
+    // </StyledButton>
+    <Link to={to}>{children}</Link>
   );
 }
 
