@@ -1,4 +1,4 @@
-import Variables from "../styles/variables";
+import Variables from "../../styles/variables";
 import styled from "styled-components";
 
 const StyledButton = styled.button`

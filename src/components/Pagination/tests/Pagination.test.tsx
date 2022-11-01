@@ -1,6 +1,7 @@
-import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import "jest-styled-components";
+import "@testing-library/jest-dom";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Pagination from "../Pagination";
 
 test("Should render Pagination component", () => {

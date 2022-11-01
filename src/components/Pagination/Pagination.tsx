@@ -1,6 +1,6 @@
+import React from "react";
 import Button from "../Button/Button";
 import { StyledPagination } from "./StyledPagination";
-import React from "react";
 
 interface PaginationPropsType extends React.ComponentProps<"div"> {
   currentOffset: number;

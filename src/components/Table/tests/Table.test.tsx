@@ -1,7 +1,8 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import "jest-styled-components";
 import Table from "../Table";
-import React from "react";
+import "@testing-library/jest-dom";
 
 test("Should render Table component with head row", () => {
   render(<Table body={<tr></tr>} />);

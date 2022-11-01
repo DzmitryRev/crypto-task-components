@@ -1,6 +1,6 @@
-import React, { ComponentType, ElementType, JSXElementConstructor, PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
 import { Link } from "react-router-dom";
-import { IntrinsicElementsKeys, StyledComponent } from "styled-components";
+import { StyledComponent } from "styled-components";
 import StyledButton from "./StyledButton";
 
 export interface ButtonPropsType

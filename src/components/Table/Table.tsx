@@ -1,5 +1,5 @@
-import React, { PropsWithChildren, ReactNode } from "react";
-import Variables from "../styles/variables";
+import React, { ReactNode } from "react";
+import Variables from "../../styles/variables";
 import TableRow from "../TableRow/TableRow";
 import { StyledTable, StyledTableCell } from "./StyledTable";
 

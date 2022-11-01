@@ -6,7 +6,8 @@
     "scripts": {
         "pub": "webpack && npm version patch && npm publish",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "test": "react-scripts test"
     },
     "keywords": [],
     "author": "Dmitry Revchenko",
@@ -27,9 +28,12 @@
         "@types/styled-components": "^5.1.26",
         "babel-loader": "^8.2.2",
         "css-loader": "^6.2.0",
+        "jest-dom": "^4.0.0",
+        "jest-styled-components": "^7.1.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.4.2",
+        "react-scripts": "^5.0.1",
         "style-loader": "^3.2.1",
         "ts-loader": "^9.2.5",
         "typescript": "^4.3.5",

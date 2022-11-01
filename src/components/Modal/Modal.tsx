@@ -1,9 +1,9 @@
 import React, { PropsWithChildren, useEffect } from "react";
 import { StyledModal, StyledModalShadow } from "./StyledModal";
-import closeIcon from "../assets/close.svg";
+import closeIcon from "../../assets/close.svg";
 
 interface ModalProps extends React.ComponentProps<"div"> {
-  type: "default" | "minify";
+  type: "regular" | "minified";
   closeModalExtraCallback?: () => void;
 }
 
