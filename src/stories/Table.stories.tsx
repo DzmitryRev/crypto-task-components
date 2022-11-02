@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import TableRow from '../components/TableRow/TableRow';
 import { StyledTableCell } from '../components/Table/StyledTable';

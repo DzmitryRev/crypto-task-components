@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Link, MemoryRouter } from 'react-router-dom';
 import Button from '../components/Button/Button';

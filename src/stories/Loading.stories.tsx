@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
 import Loading from '../components/Loading/Loading';
 
 export default {

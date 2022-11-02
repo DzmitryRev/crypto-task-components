@@ -1,4 +1,3 @@
-import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { Link, MemoryRouter } from 'react-router-dom';
 import Button from '../Button';

@@ -8,8 +8,9 @@
     "lib": ["es2015", "dom"],
     "outDir": "./dist/",
     "sourceMap": true,
-    "declaration": true
+    "declaration": true,
+    "skipLibCheck": true
   },
-  "include": ["src", "src/custom.d.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["./"],
+  "exclude": ["node_modules", ".storybook", "webpack.config.js", "dist"]
 }

@@ -11,9 +11,7 @@ export default {
   component: Modal,
   args: {
     children: 'Hello world!',
-    closeModalExtraCallback() {
-      console.log('Hello world!');
-    },
+    closeModalExtraCallback() {},
   },
   decorators: [
     (Story) => (
