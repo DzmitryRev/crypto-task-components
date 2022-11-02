@@ -9,7 +9,7 @@ export default createGlobalStyle<{ theme: ThemeType }>`
         cursor: default;
     }
     body {
-        overflow:  ${({ theme }) => theme.overflow}
+        overflow:  ${(props) => props.theme.overflow}
     }
     a{
         text-decoration: none;

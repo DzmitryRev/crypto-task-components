@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { StyledModal, StyledModalShadow } from './StyledModal';
 import closeIcon from '../../assets/close.svg';
 import { defaultTheme, openedModalTheme } from '../../styles/theme';
+import GlobalStyles from '../../styles/global';
 
 interface ModalProps extends React.ComponentProps<'div'> {
   type: 'regular' | 'minified';
@@ -25,6 +26,7 @@ function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<Mo
 
   return (
     <ThemeProvider theme={isModalOpen ? openedModalTheme : defaultTheme}>
+      <GlobalStyles />
       <StyledModalShadow
         data-testid="modal-shadow"
         aria-hidden="true"
