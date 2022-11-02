@@ -1,11 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
+import { ThemeType } from './theme';
 
-export default createGlobalStyle`
+export default createGlobalStyle<{ theme: ThemeType }>`
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         cursor: default;
+    }
+    body {
+        overflow:  ${({ theme }) => theme.overflow}
     }
     a{
         text-decoration: none;
@@ -18,22 +22,9 @@ export default createGlobalStyle`
         cursor: pointer;
     }
     svg{
-        cursor: pointer;
+        cursor: pointer; 
         *{
             cursor: pointer;
         }
-    }
-
-    ::-webkit-scrollbar {
-    width: 5px;
-    }
-    ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    }
-    ::-webkit-scrollbar-thumb {
-    background: #888;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-    background: #555;
     }
 `;

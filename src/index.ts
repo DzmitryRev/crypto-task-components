@@ -4,7 +4,8 @@ import Modal from './components/Modal/Modal';
 import Pagination from './components/Pagination/Pagination';
 import Table from './components/Table/Table';
 import TableRow from './components/TableRow/TableRow';
+import CryptoComponentsGlobal from './styles/global';
 
 export {
-  Button, Loading, Modal, Pagination, Table, TableRow,
+  Button, Loading, Modal, Pagination, Table, TableRow, CryptoComponentsGlobal,
 };

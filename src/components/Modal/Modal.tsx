@@ -1,6 +1,8 @@
-import React, { PropsWithChildren, useEffect } from 'react';
+import React, { PropsWithChildren, useEffect, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 import { StyledModal, StyledModalShadow } from './StyledModal';
 import closeIcon from '../../assets/close.svg';
+import { defaultTheme, openedModalTheme } from '../../styles/theme';
 
 interface ModalProps extends React.ComponentProps<'div'> {
   type: 'regular' | 'minified';
@@ -8,19 +10,21 @@ interface ModalProps extends React.ComponentProps<'div'> {
 }
 
 function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<ModalProps>) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const closeModal = () => {
-    document.body.style.overflow = 'auto';
+    setIsModalOpen(false);
   };
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    setIsModalOpen(true);
     return () => {
       closeModal();
     };
   }, []);
 
   return (
-    <>
+    <ThemeProvider theme={isModalOpen ? openedModalTheme : defaultTheme}>
       <StyledModalShadow
         data-testid="modal-shadow"
         aria-hidden="true"
@@ -54,7 +58,7 @@ function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<Mo
           <img data-testid="modal-close-btn" src={closeIcon} alt="close modal" />
         </div>
       </StyledModal>
-    </>
+    </ThemeProvider>
   );
 }
 
