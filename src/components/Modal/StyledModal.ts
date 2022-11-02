@@ -1,9 +1,17 @@
 import styled from 'styled-components';
 import Variables from '../../styles/variables';
 
-export const StyledModalShadow = styled.div`
+type StyledModalProps = {
+  type: 'regular' | 'minified';
+};
+
+type OpenModalType = {
+  isOpen: boolean;
+};
+
+export const StyledModalShadow = styled.div<OpenModalType>`
   position: fixed;
-  display: block;
+  display: ${(props) => (props.isOpen ? 'block' : 'none')};
   top: 0;
   bottom: 0;
   left: 0;
@@ -12,13 +20,9 @@ export const StyledModalShadow = styled.div`
   cursor: pointer;
 `;
 
-type StyledModalProps = {
-  type: 'regular' | 'minified';
-};
-
-export const StyledModal = styled.div<StyledModalProps>`
+export const StyledModal = styled.div<StyledModalProps & OpenModalType>`
   position: fixed;
-  display: block;
+  display: ${(props) => (props.isOpen ? 'block' : 'none')};
   min-height: 224px;
   min-width: 320px;
   width: ${(props) => (props.type === 'regular' ? 560 : 320)}px;

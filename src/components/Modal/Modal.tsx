@@ -30,6 +30,7 @@ function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<Mo
       <StyledModalShadow
         data-testid="modal-shadow"
         aria-hidden="true"
+        isOpen={isModalOpen}
         onClick={() => {
           if (closeModalExtraCallback) {
             closeModalExtraCallback();
@@ -40,6 +41,7 @@ function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<Mo
       <StyledModal
         data-testid="modal"
         aria-hidden="true"
+        isOpen={isModalOpen}
         type={type}
         onClick={(e) => {
           e.stopPropagation();
