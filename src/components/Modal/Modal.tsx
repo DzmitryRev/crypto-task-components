@@ -14,6 +14,9 @@ function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<Mo
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const closeModal = () => {
+    if (closeModalExtraCallback) {
+      closeModalExtraCallback();
+    }
     setIsModalOpen(false);
   };
 
@@ -32,9 +35,6 @@ function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<Mo
         aria-hidden="true"
         isOpen={isModalOpen}
         onClick={() => {
-          if (closeModalExtraCallback) {
-            closeModalExtraCallback();
-          }
           closeModal();
         }}
       />
