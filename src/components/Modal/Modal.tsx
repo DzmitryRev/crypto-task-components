@@ -1,21 +1,21 @@
-import React, { PropsWithChildren, useEffect } from "react";
-import { StyledModal, StyledModalShadow } from "./StyledModal";
-import closeIcon from "../../assets/close.svg";
+import React, { PropsWithChildren, useEffect } from 'react';
+import { StyledModal, StyledModalShadow } from './StyledModal';
+import closeIcon from '../../assets/close.svg';
 
-interface ModalProps extends React.ComponentProps<"div"> {
-  type: "regular" | "minified";
+interface ModalProps extends React.ComponentProps<'div'> {
+  type: 'regular' | 'minified';
   closeModalExtraCallback?: () => void;
 }
 
 function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<ModalProps>) {
   const closeModal = () => {
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = 'auto';
   };
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
-    () => {
-      document.body.style.overflow = "auto";
+    document.body.style.overflow = 'hidden';
+    return () => {
+      closeModal();
     };
   }, []);
 
@@ -41,11 +41,20 @@ function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<Mo
       >
         {children}
         <div className="close-button">
-          <img data-testid="modal-close-btn" src={closeIcon} onClick={closeModal} />
+          <img
+            data-testid="modal-close-btn"
+            src={closeIcon}
+            onClick={closeModal}
+            alt="close modal"
+          />
         </div>
       </StyledModal>
     </>
   );
 }
+
+Modal.defaultProps = {
+  closeModalExtraCallback: () => {},
+};
 
 export default Modal;

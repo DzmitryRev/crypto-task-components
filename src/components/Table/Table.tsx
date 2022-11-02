@@ -1,9 +1,9 @@
-import React, { ReactNode } from "react";
-import Variables from "../../styles/variables";
-import TableRow from "../TableRow/TableRow";
-import { StyledTable, StyledTableCell } from "./StyledTable";
+import React, { ReactNode } from 'react';
+import Variables from '../../styles/variables';
+import TableRow from '../TableRow/TableRow';
+import { StyledTable, StyledTableCell } from './StyledTable';
 
-interface TablePropsType extends React.ComponentProps<"table"> {
+interface TablePropsType extends React.ComponentProps<'table'> {
   body: ReactNode;
 }
 

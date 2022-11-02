@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import TableRow from "../components/TableRow/TableRow";
-import { StyledTableCell } from "../components/Table/StyledTable";
-import Table from "../components/Table/Table";
-import Variables from "../styles/variables";
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import TableRow from '../components/TableRow/TableRow';
+import { StyledTableCell } from '../components/Table/StyledTable';
+import Table from '../components/Table/Table';
+import Variables from '../styles/variables';
 
 export default {
-  title: "Table",
+  title: 'Table',
   component: Table,
 } as ComponentMeta<typeof Table>;
 

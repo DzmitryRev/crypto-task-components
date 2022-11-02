@@ -1,8 +1,8 @@
-import React from "react";
-import Button from "../Button/Button";
-import { StyledPagination } from "./StyledPagination";
+import React from 'react';
+import Button from '../Button/Button';
+import { StyledPagination } from './StyledPagination';
 
-interface PaginationPropsType extends React.ComponentProps<"div"> {
+interface PaginationPropsType extends React.ComponentProps<'div'> {
   currentOffset: number;
   setPage: (offset: number) => void;
 }
@@ -18,7 +18,7 @@ function Pagination({ currentOffset, setPage }: PaginationPropsType) {
         }}
         disabled={!currentOffset}
       >
-        {"<"}
+        {'<'}
       </Button>
       <Button
         as="button"
@@ -27,7 +27,7 @@ function Pagination({ currentOffset, setPage }: PaginationPropsType) {
           setPage(currentOffset + 50);
         }}
       >
-        {">"}
+        {'>'}
       </Button>
     </StyledPagination>
   );

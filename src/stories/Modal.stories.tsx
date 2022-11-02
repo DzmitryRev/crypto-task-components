@@ -1,16 +1,18 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { MemoryRouter, Route, Routes, Link } from "react-router-dom";
-import Modal from "../components/Modal/Modal";
-import Button from "../components/Button/Button";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {
+  MemoryRouter, Route, Routes, Link,
+} from 'react-router-dom';
+import Modal from '../components/Modal/Modal';
+import Button from '../components/Button/Button';
 
 export default {
-  title: "Modal",
+  title: 'Modal',
   component: Modal,
   args: {
-    children: "Hello world!",
+    children: 'Hello world!',
     closeModalExtraCallback() {
-      console.log("Hello world!");
+      console.log('Hello world!');
     },
   },
   decorators: [
@@ -31,10 +33,10 @@ const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 
 export const Regular = Template.bind({});
 Regular.args = {
-  type: "regular",
+  type: 'regular',
 };
 
 export const Minified = Template.bind({});
 Minified.args = {
-  type: "minified",
+  type: 'minified',
 };

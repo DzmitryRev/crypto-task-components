@@ -1,5 +1,5 @@
 // import { CircularProgress } from "@mui/material";
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledLoadingContainer = styled.div`
   position: absolute;

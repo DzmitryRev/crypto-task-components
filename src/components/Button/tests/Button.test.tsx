@@ -1,86 +1,84 @@
-import React from "react";
-import { fireEvent, render, screen } from "@testing-library/react";
-import Button from "../Button";
-import "jest-styled-components";
-import "@testing-library/jest-dom";
-import Variables from "../../../styles/variables";
-import { Link, MemoryRouter } from "react-router-dom";
+import React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { Link, MemoryRouter } from 'react-router-dom';
+import Button from '../Button';
+import 'jest-styled-components';
+import '@testing-library/jest-dom';
+import Variables from '../../../styles/variables';
 
 test('Should render Button with "Hello" children', () => {
   render(
-    <>
-      <Button as="button" color="blue">
-        Hello
-      </Button>
-    </>
+    <Button as="button" color="blue">
+      Hello
+    </Button>,
   );
-  const helloButton = screen.getByTestId("button");
+  const helloButton = screen.getByTestId('button');
   expect(helloButton).toBeInTheDocument();
-  expect(helloButton).toHaveTextContent("Hello");
-  expect(helloButton).not.toHaveTextContent("World");
+  expect(helloButton).toHaveTextContent('Hello');
+  expect(helloButton).not.toHaveTextContent('World');
 });
 
-test("Should render green Button component", () => {
+test('Should render green Button component', () => {
   render(
     <Button as="button" color="green">
       Hello
-    </Button>
+    </Button>,
   );
-  const greenButton = screen.getByTestId("button");
-  expect(greenButton).toHaveStyleRule("background-color", Variables.colors.green);
-  expect(greenButton).not.toHaveStyleRule("background-color", Variables.colors.red);
-  expect(greenButton).not.toHaveStyleRule("background-color", Variables.colors.blue);
+  const greenButton = screen.getByTestId('button');
+  expect(greenButton).toHaveStyleRule('background-color', Variables.colors.green);
+  expect(greenButton).not.toHaveStyleRule('background-color', Variables.colors.red);
+  expect(greenButton).not.toHaveStyleRule('background-color', Variables.colors.blue);
 });
 
-test("Should render red Button component", () => {
+test('Should render red Button component', () => {
   render(
     <Button as="button" color="red">
       Hello
-    </Button>
+    </Button>,
   );
-  const greenButton = screen.getByTestId("button");
-  expect(greenButton).toHaveStyleRule("background-color", Variables.colors.red);
-  expect(greenButton).not.toHaveStyleRule("background-color", Variables.colors.green);
-  expect(greenButton).not.toHaveStyleRule("background-color", Variables.colors.blue);
+  const greenButton = screen.getByTestId('button');
+  expect(greenButton).toHaveStyleRule('background-color', Variables.colors.red);
+  expect(greenButton).not.toHaveStyleRule('background-color', Variables.colors.green);
+  expect(greenButton).not.toHaveStyleRule('background-color', Variables.colors.blue);
 });
 
-test("Should render red Button as Link component", () => {
-  const MOCK_PATH = "/helloWorld";
+test('Should render red Button as Link component', () => {
+  const MOCK_PATH = '/helloWorld';
   render(
     <MemoryRouter>
       <Button as={Link} to={MOCK_PATH} color="red">
         Hello
       </Button>
-    </MemoryRouter>
+    </MemoryRouter>,
   );
-  const greenButton = screen.getByTestId("button");
-  expect(greenButton).toHaveStyleRule("background-color", Variables.colors.red);
-  expect(greenButton).toHaveAttribute("href", MOCK_PATH);
+  const greenButton = screen.getByTestId('button');
+  expect(greenButton).toHaveStyleRule('background-color', Variables.colors.red);
+  expect(greenButton).toHaveAttribute('href', MOCK_PATH);
 });
 
-test("Should render blue Button component", () => {
+test('Should render blue Button component', () => {
   render(
     <Button as="button" color="blue">
       Hello
-    </Button>
+    </Button>,
   );
-  const greenButton = screen.getByTestId("button");
-  expect(greenButton).toHaveStyleRule("background-color", Variables.colors.blue);
-  expect(greenButton).not.toHaveStyleRule("background-color", Variables.colors.green);
-  expect(greenButton).not.toHaveStyleRule("background-color", Variables.colors.red);
+  const greenButton = screen.getByTestId('button');
+  expect(greenButton).toHaveStyleRule('background-color', Variables.colors.blue);
+  expect(greenButton).not.toHaveStyleRule('background-color', Variables.colors.green);
+  expect(greenButton).not.toHaveStyleRule('background-color', Variables.colors.red);
 });
 
-test("Should render disbled Button component", () => {
+test('Should render disbled Button component', () => {
   render(
     <Button as="button" color="red" disabled>
       Hello
-    </Button>
+    </Button>,
   );
-  const greenButton = screen.getByTestId("button");
-  expect(greenButton).toHaveAttribute("disabled");
+  const greenButton = screen.getByTestId('button');
+  expect(greenButton).toHaveAttribute('disabled');
 });
 
-test("Should render Button with action", () => {
+test('Should render Button with action', () => {
   const handleClick = jest.fn();
   render(
     <Button
@@ -91,9 +89,9 @@ test("Should render Button with action", () => {
       }}
     >
       Hello
-    </Button>
+    </Button>,
   );
-  const button = screen.getByTestId("button");
+  const button = screen.getByTestId('button');
   fireEvent.click(button);
   expect(handleClick).toHaveBeenCalled();
 

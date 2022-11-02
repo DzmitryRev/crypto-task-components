@@ -11,5 +11,5 @@
     "declaration": true
   },
   "include": ["src", "src/custom.d.ts"],
-  "exclude": ["node_modules", "dist", "./src/stories"]
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledTable = styled.table`
   margin: 0 auto 20px;
@@ -32,9 +32,8 @@ export const StyledTableCell = styled.td<StyledTableCellProps>`
   padding: 0 15px;
   max-width: ${(props) => props.maxWidth}px;
   width: ${(props) => props.maxWidth}px;
-  ${(props) =>
-    props.clicable &&
-    `cursor: pointer;
+  ${(props) => props.clicable
+    && `cursor: pointer;
     &:hover {
       background-color: rgba(103, 77, 232, 0.3);
     }`}

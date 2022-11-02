@@ -1,5 +1,5 @@
-import React from "react";
-import { StyledLoadingContainer } from "./StyledLoading";
+import React from 'react';
+import { StyledLoadingContainer } from './StyledLoading';
 
 function Loading() {
   return (

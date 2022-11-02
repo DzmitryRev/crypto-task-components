@@ -1,11 +1,11 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "jest-styled-components";
-import "@testing-library/jest-dom";
-import { StyledTableCell } from "../../Table/StyledTable";
-import TableRow from "../TableRow";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+import '@testing-library/jest-dom';
+import { StyledTableCell } from '../../Table/StyledTable';
+import TableRow from '../TableRow';
 
-test("Should render TableRow component with children", () => {
+test('Should render TableRow component with children', () => {
   render(
     <table>
       <tbody>
@@ -15,16 +15,16 @@ test("Should render TableRow component with children", () => {
           <td>3</td>
         </TableRow>
       </tbody>
-    </table>
+    </table>,
   );
-  const tableRow = screen.getByTestId("table-row");
+  const tableRow = screen.getByTestId('table-row');
   expect(tableRow).toBeInTheDocument();
-  expect(tableRow).toHaveTextContent("1");
-  expect(tableRow).toHaveTextContent("2");
-  expect(tableRow).toHaveTextContent("3");
+  expect(tableRow).toHaveTextContent('1');
+  expect(tableRow).toHaveTextContent('2');
+  expect(tableRow).toHaveTextContent('3');
 });
 
-test("Should render TableCell component with maxWidth", () => {
+test('Should render TableCell component with maxWidth', () => {
   render(
     <table>
       <tbody>
@@ -32,10 +32,10 @@ test("Should render TableCell component with maxWidth", () => {
           <StyledTableCell maxWidth={100}>1</StyledTableCell>
         </TableRow>
       </tbody>
-    </table>
+    </table>,
   );
-  const cell100width = screen.getByText("1");
+  const cell100width = screen.getByText('1');
   expect(cell100width).toBeInTheDocument();
-  expect(cell100width).toHaveTextContent("1");
-  expect(cell100width).toHaveStyleRule("max-width", "100px");
+  expect(cell100width).toHaveTextContent('1');
+  expect(cell100width).toHaveStyleRule('max-width', '100px');
 });
