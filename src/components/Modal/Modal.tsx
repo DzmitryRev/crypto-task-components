@@ -40,13 +40,18 @@ function Modal({ type, closeModalExtraCallback, children }: PropsWithChildren<Mo
         }}
       >
         {children}
-        <div className="close-button">
-          <img
-            data-testid="modal-close-btn"
-            src={closeIcon}
-            onClick={closeModal}
-            alt="close modal"
-          />
+        <div
+          className="close-button"
+          role="button"
+          tabIndex={0}
+          onClick={closeModal}
+          onKeyDown={(event) => {
+            if (event.key === 'Escape') {
+              closeModal();
+            }
+          }}
+        >
+          <img data-testid="modal-close-btn" src={closeIcon} alt="close modal" />
         </div>
       </StyledModal>
     </>
