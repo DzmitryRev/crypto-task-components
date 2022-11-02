@@ -17,7 +17,6 @@ function Button<T extends AsPropType>({
   ...rest
 }: PropsWithChildren<ButtonPropsType<T> & React.ComponentProps<T>>) {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <StyledButton as={as} {...rest} color={color} data-testid="button">
       {children}
     </StyledButton>

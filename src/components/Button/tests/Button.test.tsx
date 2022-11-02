@@ -32,7 +32,7 @@ test('Should render green Button component', () => {
 
 test('Should render red Button component', () => {
   render(
-    <Button as="button" color="red">
+    <Button as="button" to="aa" color="red">
       Hello
     </Button>,
   );

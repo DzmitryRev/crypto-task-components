@@ -42,6 +42,12 @@
         "react/function-component-definition": "off",
         "react/jsx-props-no-spreading": "off"
       }
+    },
+    {
+      "files": ["Button.tsx"],
+      "rules": {
+        "react/jsx-props-no-spreading": "off"
+      }
     }
   ]
 }
