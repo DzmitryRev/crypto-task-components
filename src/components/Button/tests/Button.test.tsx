@@ -31,7 +31,7 @@ test('Should render green Button component', () => {
 
 test('Should render red Button component', () => {
   render(
-    <Button as="button" to="aa" color="red">
+    <Button as="button" color="red">
       Hello
     </Button>,
   );
@@ -45,7 +45,7 @@ test('Should render red Button as Link component', () => {
   const MOCK_PATH = '/helloWorld';
   render(
     <MemoryRouter>
-      <Button as={Link} to={MOCK_PATH} color="red">
+      <Button<typeof Link> as={Link} to={MOCK_PATH} color="red">
         Hello
       </Button>
     </MemoryRouter>,
