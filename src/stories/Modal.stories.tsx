@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story) => (
       <MemoryRouter>
-        <Button as={Link} to="/modal" color="green">
+        <Button<typeof Link> as={Link} to="/modal" color="green">
           open modal
         </Button>
         <Routes>
